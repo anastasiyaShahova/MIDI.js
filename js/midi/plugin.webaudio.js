@@ -70,9 +70,7 @@
 			}
 
 			/// convert relative delay to absolute delay
-			if (delay < ctx.currentTime) {
-				delay += ctx.currentTime;
-			}
+			delay += ctx.currentTime;
 		
 			/// create audio buffer
 			if (useStreamingBuffer) {
@@ -128,9 +126,7 @@
 			var bufferId = instrument + '' + noteId;
 			var buffer = audioBuffers[bufferId];
 			if (buffer) {
-				if (delay < ctx.currentTime) {
-					delay += ctx.currentTime;
-				}
+				delay += ctx.currentTime;
 				///
 				var source = sources[channelId + '' + noteId];
 				if (source) {
